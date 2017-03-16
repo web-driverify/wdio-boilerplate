@@ -1,4 +1,10 @@
-exports.config = {
+var fs = require('fs')
+var path = require('path')
+var cmdId = fs.readFileSync(path.resolve(__dirname, 'wdio.cid'), {encoding: 'utf8'})
+
+console.log('haha', cmdId)
+
+var config = {
     
     host: 'localhost',
     port: '8089',
@@ -44,9 +50,10 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
-        browserName: 'web-driverify'
+        browserName: 'web-driverify',
+        cmdId: cmdId
     }],
     //
     // ===================
@@ -201,3 +208,5 @@ exports.config = {
     // onComplete: function(exitCode) {
     // }
 }
+
+exports.config = config;

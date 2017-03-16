@@ -31,5 +31,7 @@ Run test cases:
 $ npm test
 ```
 
+In case you're looking for test configurations, take a look at `wdio.conf.js`
+
 [wdio]: http://webdriver.io
 [web-driverify]: https://github.com/web-driverify/web-driverify
