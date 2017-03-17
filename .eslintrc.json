@@ -1,7 +1,7 @@
 {
     "extends": "standard",
     "globals": {
-        "browser"
+        "browser": true
     },
     "env": {
         "browser": true,
